@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script src='1.js'></script>
+	<script src='2.js'></script>
+</head>
+<body>
+<script>
+	//类数组对象结构：字符串，arguments
+/*Array.from()将类数组结构转化为数组*/
+	console.log(Array.from("abcde"));
+
+	function fn1(){
+		console.log(arguments);
+		console.log(Array.from(arguments));//就是传进来的参数[1, 2, 3]
+	}
+	fn1(1,2,3);//形参大于实参个数
+
+/*Array.of()单个元素生成数组*/
+	console.log(Array.of(1,2,3)); //[1, 2, 3]
+</script>
+</body>
+</html>

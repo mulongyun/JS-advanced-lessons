@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script src="1.js"></script>
+</head>
+<body>
+	<div id="div1"></div>
+</body>
+	<script>
+		var a=1;
+		function fn1(){
+			console.log(a);
+			var b=2;
+			var c=3;
+			function fn2() {
+				var c=30;
+				var d=4;
+				console.log(c);
+			}
+			fn2();
+			console.log(c);
+			console.log(d);
+		}
+		//fn2();//报错fn2 is not defined
+		fn1();//报错d is not defined
+
+
+		var a=1;
+		function fn1(){
+			console.log(a);//1
+			var b=2;
+			var c=3;
+			function fn2() {
+				var c=30;
+				var d=4;
+				console.log(c);//30
+			}
+			fn2();
+			console.log(c);//3
+		}
+		fn1();//从内层往外层
+
+//函数和变量在完成定义之后，作用域就是确定的，和调用形式没有关系
+		var username="jack";
+		function foo(){
+			console.log(username);//jack
+		}
+		function bar(){
+			var username="mike";
+			foo();
+			console.log(username);//mike
+		}
+		bar();
+
+/*
+		//ES5没有块作用域
+		if(true){
+			var a=2;
+		}
+		console.log(a);//2
+
+		//ES6
+		if(true){
+			let b=2;//用let声明的话，就限定在花括号内部
+		}
+		console.log(b);//报错，b is not defined
+*/
+
+		var userid=5;
+		document.onclick=function(){
+			console.log(userid);//30
+			userid=10;
+		}
+		if(true){
+			var userid=30;
+		}
+
+
+		//上下文   当某行代码执行的过程中，他的上下文环境
+		// 当前作用域包含的变量，函数调用栈，this指向
+		var x=5;
+		function fn1(){
+			console.log(a);
+			var a=1;
+			var b=2;
+			function fn2() {
+				var c=3;
+				var d=4;
+			}
+			fn2();
+		}
+		fn1();
+
+		var div1=document.getElementById("div1");
+		var username="zhangsan";
+		div1.onclick=function(){
+			this.innerHTML=username;
+		}
+	</script>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script src="1.js"></script>
+</head>
+<body>
+<script>
+	/*
+	var obj={
+		objName:'onj1',
+		showName:function(){
+			var Intervalid=setTimeout(function(){
+				console.log(this);//window
+				console.log(this.objName);//undefined
+			},3000);
+		}
+	}
+	obj.showName();
+	*/
+
+
+	var obj={
+		objName:'obj1',
+		showName:function(){
+			var Intervalid=setTimeout(()=>{
+				console.log(this);//{objName: "obj1", showName: ƒ}
+				console.log(this.objName);//obj1
+			},3000);
+		}
+	}
+	obj.showName();
+</script>
+</body>
+</html>

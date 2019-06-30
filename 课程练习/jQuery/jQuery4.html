@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+	<div>层1</div>
+	<br>
+	<div>层2</div>
+	<br>
+	<div>层3</div>
+</body><!-- 引入jQuery库 -->
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+	/*jquery包装集.事件方法（回调函数）*/
+	//当鼠标移动到某层时,该层颜色背景色为:蓝色；当鼠标移出时,变为浅灰色；当单击某层，该层背景颜色为:红色；
+	$("div").css("background",'gray');
+	$("div").mouseover(function(){
+		$(this).css("background",'blue');
+	}).mouseout(function(){
+		$(this).css("background",'gray');
+	}).click(function(){
+		$(this).css("background",'red');
+	});
+</script>
+</html>

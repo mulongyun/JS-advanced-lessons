@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            height: 200px;
+            width: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+	<div></div>
+	<button id="btn">animate</button>
+</body><!-- 引入jQuery库 -->
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>//自定义动画方法
+/*
+	$('div').slideUp(1000);
+	$('div').slideDown(1000);
+	$('div').fadeIn(1000);
+	$('div').fadeOut(1000);
+*/
+/*动画的同步执行*/
+	// $('#btn').click(function(){
+	// 	$('div').animate({'margin-left':'400px','margin-top':'400px'},3000);
+	// 	//执行结束的时候的样式,执行所需要的时间
+	// })
+/*动画的顺序执行——在一个animate执行完之后在执行一个*/
+	$('#btn').click(function(){
+		$('div').animate({'margin-left':'400px'},3000).animate({'margin-top':'400px'},3000);
+		//执行结束的时候的样式,执行所需要的时间
+	})
+</script>
+</html>

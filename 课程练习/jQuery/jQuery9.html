@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            height: 400px;
+            width: 400px;
+            margin: 0 auto;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div></div>  
+    <button id='slidedown'>slidedown</button>  
+    <button id='slideup'>slideup</button> 
+    <button id='fadein'>fadein</button>  
+    <button id='fadeout'>fadeout</button>  
+    <button id='animate'>animate</button>  
+</body><!-- 引入jQuery库 -->
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+    // $('div').click(function(){
+    //     $(this).slideUp();
+    //     //$(this).slideUp(3000);
+    // })
+/*改变元素的高度来切换显示和隐藏*/
+    $('#slideup').click(function(){
+         $('div').slideUp(3000);
+    });
+    $('#slidedown').click(function(){
+         $('div').slideDown(3000);
+    });
+/*改变元素的透明度来切换显示和隐藏*/
+    $('#fadein').click(function(){
+         $('div').fadeIn(3000);
+    });
+    $('#fadeout').click(function(){
+         $('div').fadeOut(3000);
+    });
+
+
+    $('#animate').click(function(){
+         $('div').animate({'margin-left':'500px'},3000);
+    });
+</script>
+</html>

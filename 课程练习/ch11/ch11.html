@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<!-- <script src="1.js"></script> -->
+</head>
+<body>
+	
+</body>
+	<!-- <script>
+		//(function 函数名(){
+			//函数体
+		//}(实参))//整个包裹
+		(function max(x,y){
+			return x>y?x:y;
+		}(2,3));
+
+		(function min(x,y){
+			return x>y?x:y;
+		})(2,3);//仅包裹函数
+	</script> -->
+	<script>
+		for(var i=0;i<3;i++){
+        	setTimeout(function(){
+            	console.log(new Date(),i);
+        	},i*1000);
+    	}//i值是一样的，都是3
+//解决
+    	// for(var i=0;i<3;i++){
+    	// 	(function(j){
+    	// 		setTimeout(function(){
+     //        		console.log(new Date(),j);
+     //    		},j*1000);
+    	// 	})(i)
+    	// }
+	</script>
+</html>

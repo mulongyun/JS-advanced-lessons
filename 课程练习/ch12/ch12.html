@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script src="1.js"></script>
+</head>
+<body>
+</body>
+	<script>
+		// function fn0(){
+		// 	var x=1;
+		// }
+		// fn0();
+		// console.log(x);//报错
+
+		// function fn1(){
+		// 	var x=1;
+		// 	function fn2(){
+		// 		return ++x;
+		// 	}
+		// 	return fn2();
+		// }
+		// fn1();//2
+//闭包
+//通过返回函数（fn1）内部定义的函数（fn2)来访问fn1内部的局部变量（x）
+		// function fn1(){
+		// 	var x=1;
+		// 	function fn2(){
+		// 		return ++x;
+		// 	}
+		// 	return fn2;
+		// }
+		// var fn3=fn1();
+		// console.log(fn3());//2
+		// console.log(fn3());//3
+	</script>
+</html>

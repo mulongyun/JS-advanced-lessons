@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+	<table id='tb1' width='400' height='400' border='1' align="center">
+		<tr class="even">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr class="odd">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr class="even">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr class="odd">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+		<table width='400' height='400' border='1' align="center">
+		<tr class="even">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr class="odd">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr class="even">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr class="odd">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+</body>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<!-- 引入jQuery库 -->
+<script>
+	$("td:first").css('background','pink');//td中的第一个
+	$("td:last").css('background','green');//td中的最后一个
+	$("td:even").css('background','blue');//td中的偶数
+	$("td:odd").css('background','purple');//td中的奇数
+	/*eq(index)选中特定索引值的元素
+	gt(index)选中索引值大于index的元素
+	lt(index)选中索引值小于index的元素
+	not(#td1)*/
+	$("td:eq(0)").css('background','black');//td中特定索引的元素
+	$("td:gt(1)").css('background','white');//td中比索引值大的
+	$("td:lt(3)").css('background','yellow');//td中比索引值小的
+	$("td:not(#td1)").css('background','red');//所有不为#td1的td元素
+</script>
+<script >
+	/*jquery.min.js 压缩版的，一般用于生产环境
+	jquery.js 未压缩，一般用于开发环境*/
+	/*$('jquery选择器') jquery包装集
+	选择器：id选择器 类选择器 标签选择器 层级选择器
+	（后代选择器，子选择器）*/
+
+	// $('.even').css('background','red');
+	$('#tb1 .even').css('background','red');
+	//$('#tb1>.even').css('background','red');//子节点
+</script>
+</html>

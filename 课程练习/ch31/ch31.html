@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<!-- <script src="1.js"></script> -->
+	<script src="2.js"></script>
+
+</head>
+<body>
+</body>
+<script>
+/*symbol:生成唯一值*/
+	// let s1=Symbol('s1');
+	// let s2=Symbol('s2');
+	// let s3=Symbol('s1');
+	// console.log(s1==s3);//false
+
+/*symbol作为对象的属性名，永远不会重复
+	对象[symbol]{
+	[symbol]:属性值
+	}
+*/
+	// let obj={};
+	// obj[s1]='hello';
+	// //obj.s1='world';如果是点的形式
+	// let obj1={
+	// 	[s1]:'world'
+	// }
+	// console.log(obj[s1]);//hello
+	// console.log(obj1[s1]);//world
+</script>
+</html>

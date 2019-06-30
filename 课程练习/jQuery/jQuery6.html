@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    	#container{
+    		width:1000px;
+    		height:300px;
+    		border:1px solid red;
+    	}
+    	img{
+    		width:150px;
+    	}
+    	#btnlist{
+    		width:1000px;
+    		margin:0 auto;
+    	}
+    </style>
+</head>
+<body>
+	<div id="container"><img src="1.png" id="img1"></div>
+	<div id="btnlist"><button id='after'>after</button></div>
+</body><!-- 引入jQuery库 -->
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+	/*
+	向特定元素的后面插入新的结点  after()  insertAfter()
+	向特定元素的前面插入新的结点  before()  insertBefore()
+	向特定元素标签内部最后的位置插入新的结点 append()   appendTo()
+	向特定元素标签内部最前的位置插入新的结点 prepend()   prependTo()
+	
+	*/
+	// $("#after").click(function(){
+	// 	var $img2=$('<img src="1.png" />');
+	// 	$('#img1').after($img2);
+	// })
+
+	// $("#after").click(function(){
+	// 	var $img2=$('<img src="1.png" />');
+	// 	$img2.insertAfter($('#img1'));
+	// })
+	
+	// $("#after").click(function(){
+	// 	var $img2=$('<img src="1.png" />');
+	// 	$img2.insertBefore($('#img1'));
+	// })
+</script>
+</html>

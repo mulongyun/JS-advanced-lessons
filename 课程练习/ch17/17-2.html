@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<input type="text" class="forminput" id="username">
+</body>
+	<script>
+		/*构造函数，构造函数会有配置参数*/
+		(function(w,d){
+			function inputIdentify(inputId){
+				this._init(inputId);
+				this._effect();
+			}
+			inputIdentify.prototype._init=function(){
+				var inputObject=d.getElementById(inputId);
+				this.inputObject=inputObject;
+			}
+			inputIdentify.prototype._effect=function(){
+				this.inputObject.onblur=function(){
+					alert('失去焦点');
+				}
+				this.inputObject.onfocus=function(){
+					alert('获得焦点');
+				}
+			}
+			w.inputIdentify=inputIdentify;
+		})(window,document)
+
+		var input1=new inputIdentify('username');
+	</script>
+</html>
